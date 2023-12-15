@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 body{
+    font-family: 'Kalnia', serif;
     height: 100%;
     background-color: beige;
     padding: 20px;
