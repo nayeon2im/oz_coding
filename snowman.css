@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+  margin: 0;
+}
+
+.snowman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+.snowman_head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.snowman_hat1 {
+  position: relative;
+  height: 25px;
+  width: 50px;
+  bottom: -10px;
+  border-radius: 25px 25px 0 0;
+  background-color: brown;
+  z-index: 3;
+}
+
+.snowman_hat2 {
+  position: relative;
+  height: 20px;
+  width: 100px;
+  bottom: -10px;
+  border-radius: 20px 20px 0 0;
+  background-color: brown;
+  z-index: 2;
+}
+
+.snowman_face {
+  position: relative;
+  top: 0;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: white;
+  z-index: 1;
+  margin: 0;
+}
+
+#eye_left {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: black;
+  z-index: 4;
+}
+
+#eye_right {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: black;
+  z-index: 4;
+}
+
+.snowman_mouth {
+  position: absolute;
+  top: 60px;
+  left: 30%;
+  width: 40px;
+  height: 20px;
+  background-color: red;
+  z-index: 4;
+  border-radius: 0 0 20px 20px;
+}
+
+.snowman_body_top {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  top: -10; /* 변경된 부분 */
+  border-radius: 75px;
+  background-color: white;
+  z-index: 2;
+}
+
+.button1,
+.button2,
+.button3 {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  background-color: blueviolet;
+}
+
+.button2 {
+  top: 40%;
+}
+
+.button3 {
+  top: 60%;
+}
+
+.snowman_arm {
+  position: absolute;
+  top: 20px;
+  left: -30%;
+  width: 75px;
+  height: 7px;
+  background-color: brown;
+  z-index: 2;
+  transform-origin: right center;
+  transform: rotate(20deg);
+}
+
+#arm_right {
+  position: absolute;
+  top: 20px;
+  left: 80%;
+  width: 75px;
+  height: 7px;
+  background-color: brown;
+  z-index: 2;
+  transform-origin: left center;
+  transform: rotate(-20deg);
+}
+
+.snowman_body_bottom {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: 0; /* 변경된 부분 */
+  border-radius: 100px;
+  background-color: white;
+  z-index: 0;
+  margin: 0;
+}
