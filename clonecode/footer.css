@@ -1,0 +1,10 @@
+.footer{
+    margin: 0 4rem;
+    border-top: 2px solid rgb(168, 159, 159);
+}
+.footer_menu ul li{
+    padding-right: 10px;
+}
+.footer_menu ul li:nth-child(4){
+    font-weight: 600;
+}
