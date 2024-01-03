@@ -20,6 +20,7 @@ function question(n, w) {
     let total= w-3000 * n;
     result= total;
     return result;
+    
 }
 
 // 여기는 결과값 함수이므로 신경쓰지 않으셔도 됩니다!
