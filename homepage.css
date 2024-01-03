@@ -1,71 +1,180 @@
-
-* {
+*{
     box-sizing: border-box;
 }
-.page{
-    padding-left: 200px;
-    font-size: 13px;
+body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
-hr{
-    border-color:whitesmoke;
-}
-
-.top_banner {
+.flex{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+.header__title{
     width: 100%;
-    height: 30px;
-    color: white;
-    background-color: black;
+    height: 300px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+    
+}
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .smile {
+    animation: blink 1s infinite; /* 1초 간격으로 반복 */
+  }
+  
+  .header__nav{
+    align-items: center;
+    background-color:yellow;
+    width: 100%;
+    justify-content: space-between;
+    height: 70px;
+
+  }
+  .header__logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-left: 15px;
+  }
+
+.header__index ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: 30px;
+    font-size: 1.135rem;
+    font-weight: 500;
+
+}
+.header__index ul li{
+    margin-left: 30px;
+}
+li.underline {
+    position: relative;
+    display: inline-block;
 }
 
-#free {
+li.underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: aquamarine;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+li.underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+#menuicon {
+    position: absolute;
+    left: -9999px;
+}
+
+label {
+    cursor: pointer;
+    font-size: 2rem;
+    padding-right: 30px;
+}
+
+.side_bar_menu {
+    width: 200px;
+    height: 100%;
+    padding:0;
+    margin: 0;;
+    background-color: aqua;
+    position: fixed;
+    right: -250px;
+    top: calc(100%-360px);
+    z-index: 1;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+}
+
+.side_bar_menu li {
+    padding: 0;
+    align-items: center;
+    text-align: center; 
+    padding:20px 0;
+    padding-right: 60px;
+}
+input[id="menuicon"]:checked + label + .side_bar_menu {
+    right: 0;
+}
+.side_bar{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .side_bar{
+        display: block;
+    }
+    .main_bar{
+        display: none;
+    }
+    
+}
+.main__title{
+    margin: 100px 0;
+}
+.main__title p{
+    margin: 10px;
+    font-size: 3rem;
+    font-weight: 800;
+    color:seagreen;
     text-align: center;
-    flex-grow: 1;
+    
+}
+.main__title>p:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: blueviolet;
+}
+.main__icon{
+    justify-content: space-around;
+    text-align: center;
+}
+.icon {
+    margin: auto;
+    width: 450px; 
+    max-width: 450px; 
+    height: auto;
+    background-color: rgb(199, 217, 235);
+    border: 5px solid skyblue;
+    border-radius: 100px;
+    display: block; 
 }
 
-#exit {
-    text-align: right;
-    padding-right: 10px;
-}
-.logo{
-    padding-left: 0;
-    float:left;
+@media screen and (max-width: 768px) {
+    .main__icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .icon {
+        max-width: 600px;
+        margin-bottom:50px;
+    }
 }
-.bottom_banner {
-    display: flex;
-    align-items: flex-end;
-    align-items: left;
-    height: 50px;
-}
-
-.bottom_banner p {
-    margin: 0;
-    margin-right: 50px; 
-    padding-top: 5px;
-}
-.detail {
-    display: flex;
-    align-items: flex-end;
-    align-items: left;
-    height: 50px;
+.main__icon:hover .icon {
+    filter: blur(10px); 
 }
 
-.detail p {
-    margin: 0;
-    margin-right: 50px; 
-    padding-top: 5px;
-}
-.detail p:hover{
-    font-weight: bold; 
-    text-decoration: underline; 
-}
-.page_pic{
-    padding-top: 20px;
-}
-#copy{
-    text-align: right;
-    padding-right: 20px;
+.main__icon:hover .icon:hover {
+    filter: blur(0); 
 }
