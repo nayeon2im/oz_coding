@@ -1,0 +1,54 @@
+header.header{
+    position:fixed;
+    top:0;
+    width: 100%;
+    z-index:999;
+    background-color: white;
+}
+.log_index ul{
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content:flex-end;
+}
+.log_index ul li{
+    padding-right: 10px;
+    color:gray;
+    font-size: 0.75rem;
+}
+.index_main{
+   justify-content: space-between; 
+   align-items:flex-end;
+}
+.page_logo p{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    padding-left: 30px;
+}
+.page_mainindex ul{
+    margin: 0;
+    font-size: 1.435rem;
+    font-weight: 500;
+}
+.page_mainindex ul li{
+    margin-right: 30px;
+}
+#home{
+    font-weight: 650;
+}
+.page_subindex{
+    font-size: 1.085rem;
+    
+}
+.page_subindex ul{
+    margin: 0;
+    padding:10px 0 0  30px;
+}
+.page_subindex ul li{
+    margin-right: 20px;
+}
+#reco{
+    font-weight: 500;
+    border-bottom: 2.7px solid black;
+}
