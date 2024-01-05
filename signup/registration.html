@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>회원가입</title>
+    <link href="registration.css", rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+  
+        <h1>#나연스쿨 회원가입#</h1>
+        <hr>
+     
+        <form id="registForm">
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                <label for="name">이름:</label>
+                <input 
+                type="text"
+                 name="name"
+                 id="name"
+                 placeholder="이름을 입력해주세요."
+                 >
+                 <br>
+                 <br>
+                 <label for="이메일">이메일:</label>
+                 <input 
+                 type="email"
+                  name="email"
+                  id="email"
+                  placeholder="이메일을 입력해주세요."
+                  >
+                  <br>
+                  <br>
+                  <label for="password">비밀번호:</label>
+                  <input 
+                  type="text"
+                   name="password"
+                   id="password"
+                   placeholder="대소문자,숫자,특수문자를 포함."
+                   >
+                   <br>
+                   <br>
+                   <label for="phonenumber">휴대폰번호: 010-</label>
+                   <input 
+                   type="tel"
+                    name="phonenumber"
+                    id="phonenumber"
+                    placeholder="'-'를 사용해주세요"
+                    >
+                </fieldset>
+                <fieldset>
+                    <legend>선택 입력 사항</legend>
+                    <label for="gender">성별</label>
+                    <br>
+                    <input type="radio" name="gender" id="man">
+                    <label for="man">남성</label>
+                    <input type="radio" name="gender" id="woman">
+                    <label for="woman">여성</label>
+                    <br>
+                    <p>거주 지역</p>
+                    <select>
+                        <option value="placeholder" selected>지역을 선택해주세요</option>
+                        <option value="seoul">서울</option>
+                        <option value="gyeonggi">경기도</option>
+                        <option value="gangwon">강원도</option>
+                        <option value="jeolla">전라도</option>
+                        <option value="chungcheong">충청도</option>
+                        <option value="gyeongsang">경상도</option>
+                        <option value="jeju">제주</option>
+                        <option value="overseas">국외</option>
+                    </select>
+                </fieldset>
+                <label for="agree">개인정보 활용에 동의하십니까?</label>
+                <input type="checkbox" name="agree"id=agree>
+                <br>
+                <br>
+                <input type="button" value="회원가입" id="signupButton">
+
+        </form>
+
+        <hr>
+        <p>&copy;나연스쿨</p>
+
+        <script>
+
+            document.getElementById('signupButton').addEventListener('click', function () {
+
+    
+
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var phoneNumber = document.getElementById('phonenumber').value;
+                var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
+                var region = document.querySelector('select').value;
+                var agree = document.getElementById('agree').checked;
+    
+  
+                console.log('이름:', name);
+                console.log('이메일:', email);
+                console.log('비밀번호:', password);
+                console.log('휴대폰번호:', phoneNumber);
+                console.log('성별:', gender);
+                console.log('거주 지역:', region);
+                console.log('개인정보 동의:', agree);
+            });
+        </script>
+</div>
+</body>
+</html>
